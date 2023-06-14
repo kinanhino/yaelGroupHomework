@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gregorian to Hebrew Date Converter</title>
+    <link rel="stylesheet" type="text/css" href="../static/index.css">
+
+
+</head>
+
+<body>
+    <div>
+        <br>
+        <h1>Gregorian to Hebrew Date Converter</h1>
+        <h2>Please choose the date you want to convert</h2>
+        <form method="POST">
+            <input type="date" name="date_input">
+            <button type="submit" id="convert_button">Convert</button>
+        </form>
+        {% if data_dict %}
+        <div>
+            <p>The Date You Choose To Convert: {{ data_dict.gregorian_date }}</p>
+            <p>The Hebrew Date: {{ data_dict.heb_date }}</p>
+            <p>Year: {{ data_dict.heb_year }}</p>
+            <p>Month: {{ data_dict.heb_month }}</p>
+            <p>Day: {{ data_dict.heb_day }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
